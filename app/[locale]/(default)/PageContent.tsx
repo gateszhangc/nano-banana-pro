@@ -46,7 +46,7 @@ export default function LandingPage({ page, locale }: LandingPageProps) {
   const [isGeneratingText, setIsGeneratingText] = useState(false)
   const [textError, setTextError] = useState<string | null>(null)
 
-  // 从localStorage加载历史记录
+  // Load history from localStorage
   const loadHistory = (): GenerationResult[] => {
     try {
       const history = localStorage.getItem("coloring-book-history")
@@ -57,12 +57,12 @@ export default function LandingPage({ page, locale }: LandingPageProps) {
     }
   }
 
-  // 保存到localStorage
+  // Save to localStorage
   const saveToHistory = (result: GenerationResult) => {
     try {
       const history = loadHistory()
       history.unshift(result)
-      // 只保留最近10个结果
+      // Keep only the last 10 results
       const limitedHistory = history.slice(0, 10)
       localStorage.setItem("coloring-book-history", JSON.stringify(limitedHistory))
     } catch (error) {
@@ -78,11 +78,11 @@ export default function LandingPage({ page, locale }: LandingPageProps) {
         const ctx = canvas.getContext("2d")
 
         if (!ctx) {
-          reject(new Error("无法创建canvas上下文"))
+          reject(new Error("Unable to create canvas context"))
           return
         }
 
-        // 计算新尺寸
+        // Calculate new dimensions
         let { width, height } = img
         if (width > maxWidth) {
           height = (height * maxWidth) / width
@@ -92,12 +92,12 @@ export default function LandingPage({ page, locale }: LandingPageProps) {
         canvas.width = width
         canvas.height = height
 
-        // 绘制并压缩
+        // Draw and compress
         ctx.drawImage(img, 0, 0, width, height)
         const compressedBase64 = canvas.toDataURL("image/jpeg", quality)
         resolve(compressedBase64)
       }
-      img.onerror = () => reject(new Error("图片加载失败"))
+      img.onerror = () => reject(new Error("Image loading failed"))
       img.src = base64
     })
   }
@@ -106,15 +106,15 @@ export default function LandingPage({ page, locale }: LandingPageProps) {
     const file = event.target.files?.[0]
     if (!file) return
 
-    // 检查文件类型
+    // Check file type
     if (!file.type.startsWith("image/")) {
-      setError("请选择一个有效的图片文件")
+      setError("Please select a valid image file")
       return
     }
 
-    // 检查文件大小 (限制为5MB)
+    // Check file size (limit to 5MB)
     if (file.size > 5 * 1024 * 1024) {
-      setError("图片文件大小不能超过5MB")
+      setError("Image file size cannot exceed 5MB")
       return
     }
 
@@ -122,19 +122,19 @@ export default function LandingPage({ page, locale }: LandingPageProps) {
     reader.onload = async (e) => {
       const result = e.target?.result as string
 
-      // 如果图片较大，进行压缩
+      // Compress image if it's large
       let processedImage = result
       if (file.size > 1024 * 1024) {
-        // 大于1MB时压缩
+        // Compress if larger than 1MB
         try {
           processedImage = await compressImage(result, 0.8, 1024)
-          setDebugInfo(`图片已压缩: ${file.name}, 原始大小: ${(file.size / 1024).toFixed(2)}KB`)
+          setDebugInfo(`Image compressed: ${file.name}, original size: ${(file.size / 1024).toFixed(2)}KB`)
         } catch (error) {
-          console.error("图片压缩失败:", error)
-          setDebugInfo(`图片上传成功: ${file.name}, 大小: ${(file.size / 1024).toFixed(2)}KB (未压缩)`)
+          console.error("Image compression failed:", error)
+          setDebugInfo(`Image uploaded: ${file.name}, size: ${(file.size / 1024).toFixed(2)}KB (uncompressed)`)
         }
       } else {
-        setDebugInfo(`图片上传成功: ${file.name}, 大小: ${(file.size / 1024).toFixed(2)}KB`)
+        setDebugInfo(`Image uploaded: ${file.name}, size: ${(file.size / 1024).toFixed(2)}KB`)
       }
 
       setOriginalImage(processedImage)
@@ -142,36 +142,36 @@ export default function LandingPage({ page, locale }: LandingPageProps) {
       setError(null)
     }
     reader.onerror = () => {
-      setError("图片读取失败，请重试")
+      setError("Image reading failed, please try again")
     }
     reader.readAsDataURL(file)
   }
 
   const generateColoringBook = async () => {
     if (!originalImage) {
-      setError("请先上传一张图片")
+      setError("Please upload an image first")
       return
     }
 
     setIsGenerating(true)
     setError(null)
-    setDebugInfo("开始生成线稿图...")
+    setDebugInfo("Starting to generate line art...")
 
     try {
-      // 将base64转换为File对象
+      // Convert base64 to File object
       const response = await fetch(originalImage)
       const blob = await response.blob()
 
       const formData = new FormData()
       formData.append("image", blob, "image.png")
-      formData.append("prompt", "转换为黑白线稿涂色图，简洁的线条，适合儿童涂色")
+      formData.append("prompt", "Convert to black and white line art coloring page, simple lines, suitable for children to color")
       formData.append("model", "gpt-image-1")
       formData.append("n", "1")
       formData.append("quality", "auto")
       formData.append("response_format", "b64_json")
       formData.append("size", "1024x1024")
 
-      setDebugInfo("正在调用API...")
+      setDebugInfo("Calling API...")
 
       const apiResponse = await fetch("/api/generate-coloring-book", {
         method: "POST",
@@ -181,7 +181,7 @@ export default function LandingPage({ page, locale }: LandingPageProps) {
       const result = await apiResponse.json()
 
       if (!apiResponse.ok) {
-        throw new Error(result.error || `API调用失败: ${apiResponse.status}`)
+        throw new Error(result.error || `API call failed: ${apiResponse.status}`)
       }
 
       if (result.success && result.image) {
@@ -194,32 +194,32 @@ export default function LandingPage({ page, locale }: LandingPageProps) {
         setGeneratedImage(generatedImageData)
         
 
-        // 保存到历史记录
+        // Save to history
         saveToHistory({
           originalImage,
           generatedImage: generatedImageData,
           timestamp: Date.now(),
         })
 
-        setDebugInfo(`生成成功! 耗时: ${result.processingTime}ms`)
+        setDebugInfo(`Generation successful! Time: ${result.processingTime}ms`)
       } else {
-        throw new Error(result.error || "生成失败")
+        throw new Error(result.error || "Generation failed")
       }
     } catch (error) {
       console.error("Generation error:", error)
 
-      let errorMessage = "生成失败，请重试"
+      let errorMessage = "Generation failed, please try again"
       let debugDetails = ""
 
       if (error instanceof Error) {
         errorMessage = error.message
-        debugDetails = `错误类型: ${error.constructor.name}\n错误信息: ${error.message}\n时间: ${new Date().toISOString()}`
+        debugDetails = `Error type: ${error.constructor.name}\nError message: ${error.message}\nTime: ${new Date().toISOString()}`
 
-        // 特殊错误处理
+        // Special error handling
         if (error.message.includes("timeout") || error.message.includes("TIMEOUT")) {
-          debugDetails += "\n建议: 图片处理超时，请尝试使用更小的图片或稍后重试"
+          debugDetails += "\nSuggestion: Image processing timeout, please try using a smaller image or retry later"
         } else if (error.message.includes("fetch")) {
-          debugDetails += "\n可能的原因: 网络连接问题或API服务不可用"
+          debugDetails += "\nPossible cause: Network connection issue or API service unavailable"
         }
       }
 
@@ -247,12 +247,12 @@ export default function LandingPage({ page, locale }: LandingPageProps) {
 
   const generateFromText = async () => {
     if (!promptText.trim()) {
-      setTextError("请输入描述")
+      setTextError("Please enter a description")
       return
     }
     setIsGeneratingText(true)
     setTextError(null)
-    setDebugInfo("文字生成线稿中...")
+    setDebugInfo("Generating line art from text...")
     try {
       const response = await fetch("/api/generate-text-sketch", {
         method: "POST",
@@ -260,7 +260,7 @@ export default function LandingPage({ page, locale }: LandingPageProps) {
         body: JSON.stringify({ prompt: promptText }),
       })
       const result = await response.json()
-      if (!response.ok) throw new Error(result.error || `API调用失败: ${response.status}`)
+      if (!response.ok) throw new Error(result.error || `API call failed: ${response.status}`)
       if (result.success && result.image) {
         let textImageData = result.image
         const base64Prefix = "data:image/png;base64,"
@@ -269,7 +269,7 @@ export default function LandingPage({ page, locale }: LandingPageProps) {
         }
         setTextGeneratedImage(textImageData)
       } else {
-        throw new Error(result.error || "生成失败")
+        throw new Error(result.error || "Generation failed")
       }
     } catch (error) {
       setTextError(error instanceof Error ? error.message : String(error))
@@ -280,75 +280,75 @@ export default function LandingPage({ page, locale }: LandingPageProps) {
 
   return (
     <>
-       {/* ✅ 功能区域提到页面顶部 Hero 下方 */}
+       {/* ✅ Feature area below Hero */}
        {page.hero && <Hero hero={page.hero} />}
 
 <div className="relative z-10 -mt-12 pb-8 px-4">
   <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-32">
 
-    {/* 🎨 图生图区域 */}
+    {/* 🎨 Image-to-Image area */}
     <div className="flex flex-col items-center h-full">
-      <h3 className="inline-flex items-center justify-center bg-primary text-primary-foreground rounded-md text-sm font-medium h-10 px-4 mb-4">将图片转换为填色页</h3>
+      <h3 className="inline-flex items-center justify-center bg-primary text-primary-foreground rounded-md text-sm font-medium h-10 px-4 mb-4">Convert Image to Coloring Page</h3>
       <Card className="flex flex-col flex-1 w-full p-6 bg-white/90 shadow-xl border rounded-2xl">
         <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
-          <Upload className="w-5 h-5 text-blue-600" /> 上传图片生成线稿图
+          <Upload className="w-5 h-5 text-blue-600" /> Upload Image to Generate Line Art
         </h2>
         <div
           onClick={triggerFileInput}
           className="border-2 border-dashed border-blue-300 rounded-lg w-full aspect-[5/4] overflow-hidden flex items-center justify-center cursor-pointer hover:border-blue-500 hover:bg-blue-50 transition"
         >
           {originalImage ? (
-            <img src={originalImage} alt="上传" className="w-full h-full object-contain" />
+            <img src={originalImage} alt="Upload" className="w-full h-full object-contain" />
           ) : (
-            <p className="text-gray-500">点击上传图片</p>
+            <p className="text-gray-500">Click to upload image</p>
           )}
         </div>
         <input ref={fileInputRef} type="file" onChange={handleImageUpload} className="hidden" />
         <Button onClick={generateColoringBook} disabled={!originalImage || isGenerating} className="w-full mt-4">
           {isGenerating ? (
-            <><Loader2 className="w-4 h-4 animate-spin mr-2" />生成中...</>
+            <><Loader2 className="w-4 h-4 animate-spin mr-2" />Generating...</>
           ) : (
-            <><Wand2 className="w-4 h-4 mr-2" />生成涂色图</>
+            <><Wand2 className="w-4 h-4 mr-2" />Generate Coloring Page</>
           )}
         </Button>
         {generatedImage && (
           <div className="mt-4 text-center">
-            <img src={generatedImage} alt="线稿" className="rounded-lg shadow max-h-64 mx-auto" />
-            <Button onClick={downloadImage} className="mt-2 w-full">下载图片</Button>
+            <img src={generatedImage} alt="Line Art" className="rounded-lg shadow max-h-64 mx-auto" />
+            <Button onClick={downloadImage} className="mt-2 w-full">Download Image</Button>
           </div>
         )}
       </Card>
     </div>
 
-    {/* ✏️ 文生图区域 */}
+    {/* ✏️ Text-to-Image area */}
     <div className="flex flex-col items-center h-full">
-      <h3 className="inline-flex items-center justify-center bg-primary text-primary-foreground rounded-md text-sm font-medium h-10 px-4 mb-4">转换文字为填色书</h3>
+      <h3 className="inline-flex items-center justify-center bg-primary text-primary-foreground rounded-md text-sm font-medium h-10 px-4 mb-4">Convert Text to Coloring Book</h3>
       <Card className="flex flex-col flex-1 w-full p-6 bg-white/90 shadow-xl border rounded-2xl">
         <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
-          <Wand2 className="w-5 h-5 text-green-600" /> 文字描述生成线稿图
+          <Wand2 className="w-5 h-5 text-green-600" /> Generate Line Art from Text
         </h2>
         <Textarea
           value={promptText}
           onChange={(e) => setPromptText(e.target.value)}
-          placeholder="例如：一个在海滩玩耍的小孩"
+          placeholder="Example: A child playing on the beach"
           className="mb-4 w-full aspect-[5/4]"
         />
         <Button onClick={generateFromText} disabled={!promptText.trim() || isGeneratingText} className="w-full">
           {isGeneratingText ? (
-            <><Loader2 className="w-4 h-4 animate-spin mr-2" />生成中...</>
+            <><Loader2 className="w-4 h-4 animate-spin mr-2" />Generating...</>
           ) : (
-            <><Wand2 className="w-4 h-4 mr-2" />生成线稿图</>
+            <><Wand2 className="w-4 h-4 mr-2" />Generate Line Art</>
           )}
         </Button>
         {textGeneratedImage && (
           <div className="mt-4 text-center">
-            <img src={textGeneratedImage} alt="线稿图" className="rounded-lg shadow max-h-64 mx-auto" />
+            <img src={textGeneratedImage} alt="Line Art" className="rounded-lg shadow max-h-64 mx-auto" />
             <Button onClick={() => {
               const link = document.createElement("a")
               link.href = textGeneratedImage
               link.download = `text-sketch-${Date.now()}.png`
               link.click()
-            }} className="mt-2 w-full">下载图片</Button>
+            }} className="mt-2 w-full">Download Image</Button>
           </div>
         )}
       </Card>
@@ -356,7 +356,7 @@ export default function LandingPage({ page, locale }: LandingPageProps) {
   </div>
 </div>
 
-{/* 原本内容继续渲染 */}
+{/* Continue rendering original content */}
 {page.branding && <Branding section={page.branding} />}
 {page.introduce && <Feature1 section={page.introduce} />}
 {page.benefit && <Feature2 section={page.benefit} />}
