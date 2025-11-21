@@ -1,0 +1,697 @@
+{
+  "template": "coloring-page-generator",
+  "theme": "light",
+  "header": {
+    "brand": {
+      "title": "Mimi Panda",
+      "logo": {
+        "src": "/imgs/logo.png",
+        "alt": "Mimi Panda"
+      },
+      "url": "https://mimi-panda.com/zh"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "功能特点",
+          "url": "/#feature",
+          "icon": "HiOutlineSparkles"
+        },
+        {
+          "title": "定价",
+          "url": "/#pricing",
+          "icon": "MdPayment"
+        },
+        {
+          "title": "案例展示",
+          "url": "/#showcase",
+          "icon": "BiCube",
+          "children": [
+            {
+              "title": "AI壁纸商店",
+              "description": "AI壁纸生成器",
+              "icon": "MdOutlineWallpaper",
+              "url": "https://aiwallpaper.shop",
+              "target": "_blank"
+            },
+            {
+              "title": "AI封面生成器",
+              "description": "AI封面生成器",
+              "icon": "",
+              "url": "https://aicover.design",
+              "target": "_blank"
+            }
+          ]
+        }
+      ]
+    },
+    "buttons": [
+      {
+        "title": "免费试用",
+        "url": "/#feature",
+        "target": "_self",
+        "variant": "link",
+        "icon": "RiArrowRightUpLine"
+      }
+    ],
+    "show_sign": true,
+    "show_theme": true,
+    "show_locale": true
+  },
+  "hero": {
+    "title": "几秒钟内创建可打印的填色页",
+    "highlight_text": "AI 填色页生成器",
+    "description": "使用 AI 将您的照片或文字瞬间转换成可打印的填色页。",
+    "announcement": {
+      "label": "2025",
+      "title": "🎉 新年快乐",
+      "url": "/#pricing"
+    },
+    "tip": "免费且易于使用 — 无需注册",
+    "buttons": [
+      {
+        "title": "免费试用",
+        "icon": "RiFlashlightFill",
+        "url": "/#feature",
+        "target": "_self",
+        "variant": "default"
+      },
+      {
+        "title": "了解更多",
+        "icon": "RiDiscordFill",
+        "url": "https://mimi-panda.com/zh",
+        "target": "_blank",
+        "variant": "outline"
+      }
+    ],
+    "show_happy_users": true,
+    "show_badge": false
+  },
+  "branding": {
+    "title": "由 OpenAI、Next.js 和 TailwindCSS 驱动",
+    "items": [
+      {
+        "title": "Next.js",
+        "image": {
+          "src": "/imgs/logos/nextjs.svg",
+          "alt": "Next.js"
+        }
+      },
+      {
+        "title": "React",
+        "image": {
+          "src": "/imgs/logos/react.svg",
+          "alt": "React"
+        }
+      },
+      {
+        "title": "TailwindCSS",
+        "image": {
+          "src": "/imgs/logos/tailwindcss.svg",
+          "alt": "TailwindCSS"
+        }
+      },
+      {
+        "title": "Shadcn/UI",
+        "image": {
+          "src": "/imgs/logos/shadcn.svg",
+          "alt": "Shadcn/UI"
+        }
+      },
+      {
+        "title": "Vercel",
+        "image": {
+          "src": "/imgs/logos/vercel.svg",
+          "alt": "Vercel"
+        }
+      }
+    ]
+  },
+  "introduce": {
+    "name": "introduce",
+    "title": "什么是 AI 填色页生成器",
+    "label": "关于",
+    "description": "我们的 AI 工具可将您的照片和文本提示转换为高质量的线稿填色页，随时可打印和填色。",
+    "image": {
+      "src": "/imgs/features/1.png"
+    },
+    "items": [
+      {
+        "title": "即用型模板",
+        "description": "从数十个生产就绪的 AI SaaS 模板中选择，快速启动您的项目。",
+        "icon": "RiNextjsFill"
+      },
+      {
+        "title": "基础设施配置",
+        "description": "立即获取内置最佳实践的可扩展基础设施。",
+        "icon": "RiDatabase2Line"
+      },
+      {
+        "title": "快速部署",
+        "description": "在几小时内将您的 AI SaaS 应用部署到生产环境，而不是几天。",
+        "icon": "RiCloudyFill"
+      }
+    ]
+  },
+  "benefit": {
+    "name": "benefit",
+    "title": "为什么使用我们的填色页生成器",
+    "label": "优势",
+    "description": "轻松从您的图像或文本描述生成自定义填色页。",
+    "items": [
+      {
+        "title": "完整框架",
+        "description": "基于 Next.js 构建，集成身份验证、支付和 AI 功能 - 一切开箱即用。",
+        "icon": "RiNextjsFill",
+        "image": {
+          "src": "/imgs/features/2.png"
+        }
+      },
+      {
+        "title": "丰富的模板库",
+        "description": "选择各种 AI SaaS 模板来启动您的项目 - 聊天机器人、图像生成等。",
+        "icon": "RiClapperboardAiLine",
+        "image": {
+          "src": "/imgs/features/3.png"
+        }
+      },
+      {
+        "title": "技术指导",
+        "description": "获得专门支持并加入我们的开发者社区，确保您成功启动。",
+        "icon": "RiCodeFill",
+        "image": {
+          "src": "/imgs/features/4.png"
+        }
+      }
+    ]
+  },
+  "usage": {
+    "name": "usage",
+    "title": "如何创建填色页",
+    "description": "通过三步轻松生成填色页：",
+    "image": {
+      "src": "/imgs/features/1.png"
+    },
+    "image_position": "left",
+    "text_align": "center",
+    "items": [
+      {
+        "title": "获取 ShipAny",
+        "description": "一次性付款购买 ShipAny。查收邮件获取代码和文档。",
+        "image": {
+          "src": "/imgs/features/5.png"
+        }
+      },
+      {
+        "title": "开始您的项目",
+        "description": "阅读文档并克隆 ShipAny 代码。开始构建您的 AI SaaS 创业项目。",
+        "image": {
+          "src": "/imgs/features/6.png"
+        }
+      },
+      {
+        "title": "定制您的项目",
+        "description": "使用您的数据和内容修改模板。满足特定的 AI 功能需求。",
+        "image": {
+          "src": "/imgs/features/7.png"
+        }
+      },
+      {
+        "title": "部署到生产环境",
+        "description": "通过几个步骤将项目部署到生产环境，立即开始服务客户。",
+        "image": {
+          "src": "/imgs/features/8.png"
+        }
+      }
+    ]
+  },
+  "feature": {
+    "name": "feature",
+    "title": "生成器核心功能",
+    "description": "强大的 AI 工具，实现无缝填色页生成。",
+    "items": [
+      {
+        "title": "Next.js 模板",
+        "description": "生产就绪的 Next.js 模板，支持 SEO 友好结构和国际化。",
+        "icon": "RiNextjsFill"
+      },
+      {
+        "title": "身份验证和支付",
+        "description": "集成 Google OAuth、一键登录和 Stripe 支付处理。",
+        "icon": "RiKey2Fill"
+      },
+      {
+        "title": "数据基础设施",
+        "description": "内置 Supabase 集成，提供可靠和可扩展的数据存储。",
+        "icon": "RiDatabase2Line"
+      },
+      {
+        "title": "一键部署",
+        "description": "无缝部署到 Vercel 或 Cloudflare，自动化设置。",
+        "icon": "RiCloudy2Fill"
+      },
+      {
+        "title": "业务分析",
+        "description": "集成 Google Analytics 和 Search Console 追踪增长。",
+        "icon": "RiBarChart2Line"
+      },
+      {
+        "title": "AI 就绪基础设施",
+        "description": "预配置 AI 集成，内置积分系统和 API 销售。",
+        "icon": "RiRobot2Line"
+      }
+    ]
+  },
+  "showcase": {
+    "name": "showcase",
+    "title": "探索 AI 生成的填色页",
+    "description": "发现用户创作的精彩案例。",
+    "items": [
+      {
+        "title": "ThinkAny",
+        "description": "AI 搜索引擎",
+        "url": "https://thinkany.ai",
+        "target": "_blank",
+        "image": {
+          "src": "/imgs/showcases/7.png"
+        }
+      },
+      {
+        "title": "HeyBeauty",
+        "description": "AI 虚拟试妆",
+        "url": "https://heybeauty.ai",
+        "target": "_blank",
+        "image": {
+          "src": "/imgs/showcases/5.png"
+        }
+      },
+      {
+        "title": "AI Wallpaper",
+        "description": "AI 壁纸生成器",
+        "url": "https://aiwallpaper.shop",
+        "target": "_blank",
+        "image": {
+          "src": "/imgs/showcases/1.png"
+        }
+      },
+      {
+        "title": "AI Cover",
+        "description": "AI 封面生成器",
+        "url": "https://aicover.design",
+        "target": "_blank",
+        "image": {
+          "src": "/imgs/showcases/2.png"
+        }
+      },
+      {
+        "title": "GPTs Works",
+        "description": "GPTs 目录",
+        "url": "https://gpts.works",
+        "target": "_blank",
+        "image": {
+          "src": "/imgs/showcases/3.png"
+        }
+      },
+      {
+        "title": "Melodisco",
+        "description": "AI 音乐播放器",
+        "url": "https://melodis.co",
+        "target": "_blank",
+        "image": {
+          "src": "/imgs/showcases/4.png"
+        }
+      },
+      {
+        "title": "Pagen",
+        "description": "AI 落地页生成器",
+        "url": "https://pagen.so",
+        "target": "_blank",
+        "image": {
+          "src": "/imgs/showcases/6.png"
+        }
+      },
+      {
+        "title": "SoraFM",
+        "description": "AI 视频生成器",
+        "url": "https://sorafm.trys.ai",
+        "target": "_blank",
+        "image": {
+          "src": "/imgs/showcases/8.png"
+        }
+      },
+      {
+        "title": "PodLM",
+        "description": "AI 播客生成器",
+        "url": "https://podlm.ai",
+        "target": "_blank",
+        "image": {
+          "src": "/imgs/showcases/9.png"
+        }
+      }
+    ]
+  },
+  "stats": {
+    "name": "stats",
+    "label": "统计",
+    "title": "深受填色爱好者喜爱",
+    "description": "加入数千名生成 AI 填色页的用户。",
+    "icon": "FaRegHeart",
+    "items": [
+      {
+        "title": "信任",
+        "label": "99+",
+        "description": "客户"
+      },
+      {
+        "title": "内置",
+        "label": "20+",
+        "description": "组件"
+      },
+      {
+        "title": "快速发布",
+        "label": "5",
+        "description": "分钟"
+      }
+    ]
+  },
+  "pricing": {
+    "name": "pricing",
+    "label": "定价",
+    "title": "定价",
+    "description": "选择套餐，解锁高级填色页生成功能。",
+    "groups": [],
+    "items": [
+      {
+        "title": "入门版",
+        "description": "开始您的第一个 SaaS 创业项目。",
+        "features_title": "包含",
+        "features": [
+          "100 积分，有效期 1 个月",
+          "NextJS 模板",
+          "SEO 友好结构",
+          "Stripe 支付",
+          "Supabase 数据存储",
+          "Google OAuth 和一键登录",
+          "国际化支持"
+        ],
+        "interval": "one-time",
+        "amount": 9900,
+        "cn_amount": 69900,
+        "currency": "USD",
+        "price": "$99",
+        "original_price": "$199",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "一次付费，无限项目！",
+        "button": {
+          "title": "选择套餐",
+          "url": "/#pricing",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "starter",
+        "product_name": "ShipAny 模板入门版",
+        "credits": 100,
+        "valid_months": 1
+      },
+      {
+        "title": "标准版",
+        "description": "快速启动您的 SaaS 创业项目。",
+        "label": "热门",
+        "features_title": "包含入门版所有功能，另加",
+        "features": [
+          "200 积分，有效期 3 个月",
+          "Vercel 或 Cloudflare 部署",
+          "隐私和条款生成",
+          "Google Analytics 集成",
+          "Google Search Console 集成",
+          "Discord 社区",
+          "首次发布技术支持",
+          "终身更新"
+        ],
+        "interval": "one-time",
+        "amount": 19900,
+        "cn_amount": 139900,
+        "currency": "USD",
+        "price": "$199",
+        "original_price": "$299",
+        "unit": "USD",
+        "is_featured": true,
+        "tip": "一次付费，无限项目！",
+        "button": {
+          "title": "选择套餐",
+          "url": "/#pricing",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "standard",
+        "product_name": "ShipAny 模板标准版",
+        "credits": 200,
+        "valid_months": 3
+      },
+      {
+        "title": "高级版",
+        "description": "构建任何 AI SaaS 创业项目。",
+        "features_title": "包含标准版所有功能，另加",
+        "features": [
+          "300 积分，有效期 1 年",
+          "AI 业务功能",
+          "用户中心",
+          "积分系统",
+          "SaaS API 销售",
+          "管理系统",
+          "优先技术支持"
+        ],
+        "interval": "one-time",
+        "amount": 29900,
+        "cn_amount": 199900,
+        "currency": "USD",
+        "price": "$299",
+        "original_price": "$399",
+        "unit": "USD",
+        "is_featured": false,
+        "tip": "一次付费，无限项目！",
+        "button": {
+          "title": "选择套餐",
+          "url": "/#pricing",
+          "icon": "RiFlashlightFill"
+        },
+        "product_id": "premium",
+        "product_name": "ShipAny 模板高级版",
+        "credits": 300,
+        "valid_months": 12
+      }
+    ]
+  },
+  "testimonial": {
+    "name": "testimonial",
+    "label": "用户评价",
+    "title": "用户对我们的 AI 生成器怎么说",
+    "description": "听听用户如何创作独特的填色页。",
+    "icon": "GoThumbsup",
+    "items": [
+      {
+        "title": "陈大卫",
+        "label": "AIWallpaper.shop 创始人",
+        "description": "ShipAny 为我们节省了数月的开发时间。我们仅用 2 天就启动了 AI 壁纸业务，一周内就获得了第一个付费客户！",
+        "image": {
+          "src": "/imgs/users/1.png"
+        }
+      },
+      {
+        "title": "金瑞秋",
+        "label": "HeyBeauty.ai 技术总监",
+        "description": "预构建的 AI 基础设施是一个游戏规则改变者。我们无需担心架构 - 只需专注于 AI 美容技术并快速上线。",
+        "image": {
+          "src": "/imgs/users/2.png"
+        }
+      },
+      {
+        "title": "马库斯",
+        "label": "独立开发者",
+        "description": "作为独立开发者，ShipAny 给了我所需的一切 - 身份验证、支付、AI 集成和漂亮的 UI。一个周末就启动了我的 SaaS！",
+        "image": {
+          "src": "/imgs/users/3.png"
+        }
+      },
+      {
+        "title": "索菲亚",
+        "label": "Melodisco CEO",
+        "description": "这些模板可直接用于生产且高度可定制。我们用几小时而不是几个月就建立了 AI 音乐平台。上市时间令人难以置信！",
+        "image": {
+          "src": "/imgs/users/4.png"
+        }
+      },
+      {
+        "title": "詹姆斯",
+        "label": "GPTs.works 技术主管",
+        "description": "ShipAny 的基础设施非常稳固。我们从 0 扩展到 1 万用户都没碰后端。这是我们 AI 创业最好的投资。",
+        "image": {
+          "src": "/imgs/users/5.png"
+        }
+      },
+      {
+        "title": "张安娜",
+        "label": "创业者",
+        "description": "从想法到上线只用了 3 天！ShipAny 的模板和部署工具让我们能够以令人难以置信的速度测试 AI 业务概念。",
+        "image": {
+          "src": "/imgs/users/6.png"
+        }
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "常见问题",
+    "title": "常见问题",
+    "description": "还有其他问题？通过 Discord 或电子邮件联系我们。",
+    "items": [
+      {
+        "title": "什么是 AI 填色页生成器？",
+        "description": "我们的工具可将照片和文本提示转换为可打印的填色页。"
+      },
+      {
+        "title": "我可以上传哪些文件格式？",
+        "description": "上传最大 5MB 的 JPEG 或 PNG 图片以创建填色页。"
+      },
+      {
+        "title": "使用是否免费？",
+        "description": "基础功能免费，高级套餐可解锁更高分辨率和批量处理。"
+      }
+    ]
+  },
+  "cta": {
+    "name": "cta",
+    "title": "开始生成填色页",
+    "description": "立即使用 AI 创建您的第一个填色页。",
+    "buttons": [
+      {
+        "title": "生成填色页",
+        "url": "/#feature",
+        "target": "_blank",
+        "icon": "GoArrowUpRight"
+      },
+      {
+        "title": "查看示例",
+        "url": "/#showcase",
+        "target": "_blank",
+        "variant": "outline"
+      }
+    ]
+  },
+  "footer": {
+    "name": "footer",
+    "brand": {
+      "title": "Mimi Panda",
+      "description": "使用 AI 从您的照片和文本创建独特的填色页。",
+      "logo": {
+        "src": "/imgs/logo.png",
+        "alt": "Mimi Panda"
+      },
+      "url": "https://mimi-panda.com/zh"
+    },
+    "copyright": "© 2025 • Mimi Panda 保留所有权利。",
+    "nav": {
+      "items": [
+        {
+          "title": "关于",
+          "children": [
+            {
+              "title": "功能特点",
+              "url": "/#feature",
+              "target": "_self"
+            },
+            {
+              "title": "案例展示",
+              "url": "/#showcase",
+              "target": "_self"
+            },
+            {
+              "title": "定价",
+              "url": "/#pricing",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "资源",
+          "children": [
+            {
+              "title": "文档",
+              "url": "https://docs.shipany.ai",
+              "target": "_blank"
+            },
+            {
+              "title": "组件",
+              "url": "https://shipany.ai/components",
+              "target": "_blank"
+            },
+            {
+              "title": "模板",
+              "url": "https://shipany.ai/templates",
+              "target": "_blank"
+            }
+          ]
+        },
+        {
+          "title": "友情链接",
+          "children": [
+            {
+              "title": "ThinkAny",
+              "url": "https://thinkany.ai",
+              "target": "_blank"
+            },
+            {
+              "title": "HeyBeauty",
+              "url": "https://heybeauty.ai",
+              "target": "_blank"
+            },
+            {
+              "title": "Pagen",
+              "url": "https://pagen.so",
+              "target": "_blank"
+            }
+          ]
+        }
+      ]
+    },
+    "social": {
+      "items": [
+        {
+          "title": "X",
+          "icon": "RiTwitterXFill",
+          "url": "https://x.com/shipanyai",
+          "target": "_blank"
+        },
+        {
+          "title": "Github",
+          "icon": "RiGithubFill",
+          "url": "https://github.com/shipanyai",
+          "target": "_blank"
+        },
+        {
+          "title": "Discord",
+          "icon": "RiDiscordFill",
+          "url": "https://discord.gg/HQNnrzjZQS",
+          "target": "_blank"
+        },
+        {
+          "title": "邮箱",
+          "icon": "RiMailLine",
+          "url": "mailto:support@shipany.ai",
+          "target": "_self"
+        }
+      ]
+    },
+    "agreement": {
+      "items": [
+        {
+          "title": "隐私政策",
+          "url": "/privacy-policy"
+        },
+        {
+          "title": "服务条款",
+          "url": "/terms-of-service"
+        }
+      ]
+    }
+  }
+}
