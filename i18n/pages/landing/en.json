@@ -1,14 +1,14 @@
 {
-  "template": "coloring-page-generator",
+  "template": "nano-banana-pro",
   "theme": "light",
   "header": {
     "brand": {
-      "title": "Mimi Panda",
+      "title": "Nano Banana Pro",
       "logo": {
         "src": "/imgs/logo.png",
-        "alt": "Mimi Panda"
+        "alt": "Nano Banana Pro"
       },
-      "url": "https://mimi-panda.com/"
+      "url": "https://nano-banana-pro.com/"
     },
     "nav": {
       "items": [
@@ -66,15 +66,15 @@
     "show_locale": true
   },
   "hero": {
-    "title": "Create Printable Coloring Pages in Seconds",
-    "highlight_text": "AI Coloring Page Generator",
-    "description": "Turn your photos or text into beautiful, printable coloring pages instantly with AI.",
+    "title": "Generate Stunning Images with AI",
+    "highlight_text": "Nano Banana Pro",
+    "description": "Transform your ideas into high-quality images instantly. Create, edit, and bring your imagination to life with advanced AI technology.",
     "announcement": {
-      "label": "2025",
-      "title": "🎉 Happy New Year",
-      "url": "/#pricing"
+      "label": "New",
+      "title": "✨ Imagen 3 Now Available",
+      "url": "/#feature"
     },
-    "tip": "Free and easy to use — no signup required",
+    "tip": "Start creating for free — powerful AI at your fingertips",
     "buttons": [
       {
         "title": "Try It Free",
@@ -84,10 +84,10 @@
         "variant": "default"
       },
       {
-        "title": "Learn More",
-        "icon": "RiDiscordFill",
-        "url": "https://mimi-panda.com/",
-        "target": "_blank",
+        "title": "View Gallery",
+        "icon": "RiGalleryFill",
+        "url": "/#showcase",
+        "target": "_self",
         "variant": "outline"
       }
     ],
@@ -95,7 +95,7 @@
     "show_badge": false
   },
   "branding": {
-    "title": "Powered by OpenAI, Next.js, and TailwindCSS",
+    "title": "Powered by Advanced AI Technology",
     "items": [
       {
         "title": "Next.js",
@@ -136,56 +136,56 @@
   },
   "introduce": {
     "name": "introduce",
-    "title": "What is AI Coloring Page Generator",
+    "title": "What is Nano Banana Pro",
     "label": "About",
-    "description": "Our AI-powered tool transforms your photos and text prompts into high-quality line art coloring pages, ready to print and color.",
+    "description": "Nano Banana Pro is an advanced AI image generation platform that turns your text descriptions into stunning, photorealistic images. Create anything you can imagine with state-of-the-art AI models.",
     "image": {
       "src": "/imgs/features/1.png"
     },
     "items": [
       {
-        "title": "Ready-to-use Templates",
-        "description": "Choose from dozens of production-ready AI SaaS templates to quickly start your project.",
-        "icon": "RiNextjsFill"
+        "title": "Photorealistic Quality",
+        "description": "Generate images with incredible detail and realism that rival professional photography.",
+        "icon": "RiCameraFill"
       },
       {
-        "title": "Infrastructure Setup",
-        "description": "Get instant access to scalable infrastructure with best practices built-in.",
-        "icon": "RiDatabase2Line"
+        "title": "Lightning Fast",
+        "description": "Create high-quality images in seconds with our optimized AI infrastructure.",
+        "icon": "RiFlashlightFill"
       },
       {
-        "title": "Quick Deployment",
-        "description": "Deploy your AI SaaS application to production in hours, not days.",
-        "icon": "RiCloudyFill"
+        "title": "Easy to Use",
+        "description": "Simply describe what you want to see, and our AI brings it to life instantly.",
+        "icon": "RiMagicFill"
       }
     ]
   },
   "benefit": {
     "name": "benefit",
-    "title": "Why Use Our Coloring Page Generator",
+    "title": "Why Choose Nano Banana Pro",
     "label": "Benefits",
-    "description": "Easily generate custom coloring pages from your own images or text descriptions.",
+    "description": "Experience the next generation of AI image creation with unmatched quality and control.",
     "items": [
       {
-        "title": "Complete Framework",
-        "description": "Built on Next.js with authentication, payments, and AI integration - everything works out of the box.",
-        "icon": "RiNextjsFill",
+        "title": "Exceptional Image Quality",
+        "description": "Generate images with stunning detail, accurate lighting, and fewer visual artifacts than ever before.",
+        "icon": "RiImageFill",
         "image": {
           "src": "/imgs/features/2.png"
         }
       },
       {
-        "title": "Rich Templates Library",
-        "description": "Choose from various AI SaaS templates to kickstart your project - chatbots, image generation, and more.",
-        "icon": "RiClapperboardAiLine",
+        "title": "Creative Control",
+        "description": "Fine-tune your generations with advanced parameters, style controls, and editing capabilities.",
+        "icon": "RiPaletteFill",
         "image": {
           "src": "/imgs/features/3.png"
         }
       },
       {
-        "title": "Technical Guidance",
-        "description": "Get dedicated support and join our developer community to ensure your successful launch.",
-        "icon": "RiCodeFill",
+        "title": "Versatile Applications",
+        "description": "Perfect for marketing, design, content creation, prototyping, and artistic exploration.",
+        "icon": "RiLightbulbFlashFill",
         "image": {
           "src": "/imgs/features/4.png"
         }
@@ -194,8 +194,8 @@
   },
   "usage": {
     "name": "usage",
-    "title": "How to Create a Coloring Page",
-    "description": "Generate your coloring page in three easy steps:",
+    "title": "How to Generate Images",
+    "description": "Create stunning AI images in simple steps:",
     "image": {
       "src": "/imgs/features/1.png"
     },
@@ -203,29 +203,29 @@
     "text_align": "center",
     "items": [
       {
-        "title": "Get ShipAny",
-        "description": "Buy ShipAny with a one-time payment. Check your email for the code and documentation.",
+        "title": "Describe Your Vision",
+        "description": "Type a detailed description of the image you want to create. Be specific about style, mood, and details.",
         "image": {
           "src": "/imgs/features/5.png"
         }
       },
       {
-        "title": "Start Your Project",
-        "description": "Read the documentation and clone the code of ShipAny. Start building your AI SaaS startup.",
+        "title": "Customize Settings",
+        "description": "Choose your preferred aspect ratio, style, and quality settings to match your needs.",
         "image": {
           "src": "/imgs/features/6.png"
         }
       },
       {
-        "title": "Customize Your Project",
-        "description": "Modify the template with your data and contents. Specific AI functionality needs.",
+        "title": "Generate & Refine",
+        "description": "Click generate and watch your image come to life. Edit and iterate until it's perfect.",
         "image": {
           "src": "/imgs/features/7.png"
         }
       },
       {
-        "title": "Deploy to Production",
-        "description": "Deploy your project to production with a few steps and start serving customers immediately.",
+        "title": "Download & Share",
+        "description": "Export your creation in high resolution and use it anywhere you need.",
         "image": {
           "src": "/imgs/features/8.png"
         }
@@ -234,45 +234,45 @@
   },
   "feature": {
     "name": "feature",
-    "title": "Key Features of Our Generator",
-    "description": "Powerful AI tools for seamless coloring page creation.",
+    "title": "Powerful Features",
+    "description": "Everything you need to create amazing AI-generated images.",
     "items": [
       {
-        "title": "Next.js Boilerplate",
-        "description": "Production-ready Next.js templates with SEO-friendly structure and i18n support.",
-        "icon": "RiNextjsFill"
+        "title": "Text-to-Image",
+        "description": "Transform any text description into stunning, high-quality images with advanced AI models.",
+        "icon": "RiText"
       },
       {
-        "title": "Authentication & Payments",
-        "description": "Integrated Google OAuth, one-tap login, and Stripe payment processing.",
-        "icon": "RiKey2Fill"
+        "title": "Image Editing",
+        "description": "Edit existing images with AI - change elements, add objects, or modify styles seamlessly.",
+        "icon": "RiEditFill"
       },
       {
-        "title": "Data Infrastructure",
-        "description": "Built-in Supabase integration for reliable and scalable data storage.",
-        "icon": "RiDatabase2Line"
+        "title": "Style Transfer",
+        "description": "Apply artistic styles to your images or generate in specific visual aesthetics.",
+        "icon": "RiBrushFill"
       },
       {
-        "title": "One-Click Deployment",
-        "description": "Seamless deployment to Vercel or Cloudflare with automated setup.",
-        "icon": "RiCloudy2Fill"
+        "title": "High Resolution",
+        "description": "Generate images up to 4K resolution for professional use and printing.",
+        "icon": "RiHdFill"
       },
       {
-        "title": "Business Analytics",
-        "description": "Integrated Google Analytics and Search Console for tracking growth.",
-        "icon": "RiBarChart2Line"
+        "title": "Batch Generation",
+        "description": "Create multiple variations of your prompt to explore different creative possibilities.",
+        "icon": "RiLayoutGridFill"
       },
       {
-        "title": "AI-Ready Infrastructure",
-        "description": "Pre-configured AI integration with built-in credits system and API sales.",
-        "icon": "RiRobot2Line"
+        "title": "Commercial License",
+        "description": "Use generated images for commercial projects with full rights and licensing.",
+        "icon": "RiCopyrightFill"
       }
     ]
   },
   "showcase": {
     "name": "showcase",
-    "title": "Explore AI-Generated Coloring Pages",
-    "description": "Discover creations made by our users.",
+    "title": "Gallery of AI Creations",
+    "description": "Explore stunning images generated by Nano Banana Pro users.",
     "items": [
       {
         "title": "ThinkAny",
@@ -360,185 +360,186 @@
   "stats": {
     "name": "stats",
     "label": "Stats",
-    "title": "Loved by Coloring Enthusiasts",
-    "description": "Join thousands of users generating AI coloring pages.",
+    "title": "Trusted by Creators Worldwide",
+    "description": "Join millions of users creating with Nano Banana Pro.",
     "icon": "FaRegHeart",
     "items": [
       {
-        "title": "Trusted by",
-        "label": "99+",
-        "description": "Customers"
+        "title": "Images Generated",
+        "label": "10M+",
+        "description": "Monthly"
       },
       {
-        "title": "Built in",
-        "label": "20+",
-        "description": "Components"
+        "title": "Active Users",
+        "label": "500K+",
+        "description": "Worldwide"
       },
       {
-        "title": "Ship Fast in",
-        "label": "5",
-        "description": "Minutes"
+        "title": "Average Rating",
+        "label": "4.9",
+        "description": "Out of 5"
       }
     ]
   },
   "pricing": {
     "name": "pricing",
     "label": "Pricing",
-    "title": "Pricing",
-    "description": "Choose a plan to unlock advanced features for your coloring page generator.",
+    "title": "Simple, Transparent Pricing",
+    "description": "Choose the perfect plan for your creative needs.",
     "groups": [],
     "items": [
       {
-        "title": "Starter",
-        "description": "Get started with your first SaaS startup.",
+        "title": "Free",
+        "description": "Perfect for trying out Nano Banana Pro.",
         "features_title": "Includes",
         "features": [
-          "100 credits, valid for 1 month",
-          "NextJS boilerplate",
-          "SEO-friendly structure",
-          "Payment with Stripe",
-          "Data storage with Supabase",
-          "Google Oauth & One-Tap Login",
-          "i18n support"
+          "50 generations per month",
+          "Standard quality images",
+          "1024x1024 resolution",
+          "Basic editing tools",
+          "Community support",
+          "Watermarked images",
+          "Personal use license"
         ],
-        "interval": "one-time",
-        "amount": 9900,
-        "cn_amount": 69900,
+        "interval": "month",
+        "amount": 0,
+        "cn_amount": 0,
         "currency": "USD",
-        "price": "$99",
-        "original_price": "$199",
+        "price": "Free",
+        "original_price": "",
         "unit": "USD",
         "is_featured": false,
-        "tip": "Pay once. Build unlimited projects!",
+        "tip": "No credit card required",
         "button": {
-          "title": "Choose Plan",
-          "url": "/#pricing",
+          "title": "Get Started",
+          "url": "/#feature",
           "icon": "RiFlashlightFill"
         },
-        "product_id": "starter",
-        "product_name": "ShipAny Boilerplate Starter",
-        "credits": 100,
+        "product_id": "free",
+        "product_name": "Nano Banana Pro Free",
+        "credits": 50,
         "valid_months": 1
       },
       {
-        "title": "Standard",
-        "description": "Ship Fast with your SaaS Startups.",
+        "title": "Pro",
+        "description": "For creators and professionals.",
         "label": "Popular",
-        "features_title": "Everything in Starter, plus",
+        "features_title": "Everything in Free, plus",
         "features": [
-          "200 credits, valid for 3 month",
-          "Deploy with Vercel or Cloudflare",
-          "Generation of Privacy & Terms",
-          "Google Analytics Integration",
-          "Google Search Console Integration",
-          "Discord community",
-          "Technical support for your first ship",
-          "Lifetime updates"
+          "500 generations per month",
+          "High quality images",
+          "Up to 2048x2048 resolution",
+          "Advanced editing tools",
+          "No watermarks",
+          "Priority generation queue",
+          "Commercial use license",
+          "Email support"
         ],
-        "interval": "one-time",
-        "amount": 19900,
-        "cn_amount": 139900,
+        "interval": "month",
+        "amount": 1999,
+        "cn_amount": 13999,
         "currency": "USD",
-        "price": "$199",
-        "original_price": "$299",
-        "unit": "USD",
+        "price": "$19.99",
+        "original_price": "$29.99",
+        "unit": "month",
         "is_featured": true,
-        "tip": "Pay once. Build unlimited projects!",
+        "tip": "Most popular plan for creators",
         "button": {
           "title": "Choose Plan",
           "url": "/#pricing",
           "icon": "RiFlashlightFill"
         },
-        "product_id": "standard",
-        "product_name": "ShipAny Boilerplate Standard",
-        "credits": 200,
-        "valid_months": 3
+        "product_id": "pro",
+        "product_name": "Nano Banana Pro",
+        "credits": 500,
+        "valid_months": 1
       },
       {
-        "title": "Premium",
-        "description": "Ship Any AI SaaS Startups.",
-        "features_title": "Everything in Standard, plus",
+        "title": "Enterprise",
+        "description": "For teams and businesses.",
+        "features_title": "Everything in Pro, plus",
         "features": [
-          "300 credits, valid for 1 year",
-          "Business Functions with AI",
-          "User Center",
-          "Credits System",
-          "API Sales for your SaaS",
-          "Admin System",
-          "Priority Technical Support"
+          "Unlimited generations",
+          "Ultra quality images",
+          "Up to 4096x4096 resolution",
+          "API access",
+          "Custom model training",
+          "Dedicated support",
+          "Team collaboration tools",
+          "SLA guarantee"
         ],
-        "interval": "one-time",
-        "amount": 29900,
-        "cn_amount": 199900,
+        "interval": "month",
+        "amount": 9999,
+        "cn_amount": 69999,
         "currency": "USD",
-        "price": "$299",
-        "original_price": "$399",
-        "unit": "USD",
+        "price": "$99.99",
+        "original_price": "$149.99",
+        "unit": "month",
         "is_featured": false,
-        "tip": "Pay once. Build unlimited projects!",
+        "tip": "Perfect for teams and agencies",
         "button": {
-          "title": "Choose Plan",
+          "title": "Contact Sales",
           "url": "/#pricing",
           "icon": "RiFlashlightFill"
         },
-        "product_id": "premium",
-        "product_name": "ShipAny Boilerplate Premium",
-        "credits": 300,
-        "valid_months": 12
+        "product_id": "enterprise",
+        "product_name": "Nano Banana Pro Enterprise",
+        "credits": 999999,
+        "valid_months": 1
       }
     ]
   },
   "testimonial": {
     "name": "testimonial",
     "label": "Testimonial",
-    "title": "What Users Say About Our AI Generator",
-    "description": "Hear how users create unique coloring pages.",
+    "title": "What Creators Say",
+    "description": "See how professionals use Nano Banana Pro in their work.",
     "icon": "GoThumbsup",
     "items": [
       {
-        "title": "David Chen",
-        "label": "Founder of AIWallpaper.shop",
-        "description": "ShipAny saved us months of development time. We launched our AI wallpaper business in just 2 days and got our first paying customer within a week!",
+        "title": "Sarah Mitchell",
+        "label": "Marketing Director",
+        "description": "Nano Banana Pro transformed our content creation workflow. We generate stunning visuals for campaigns in minutes instead of days. The quality is incredible!",
         "image": {
           "src": "/imgs/users/1.png"
         }
       },
       {
-        "title": "Rachel Kim",
-        "label": "CTO at HeyBeauty.ai",
-        "description": "The pre-built AI infrastructure is a game-changer. We didn't have to worry about architecture - just focused on our AI beauty tech and went live fast.",
+        "title": "Alex Chen",
+        "label": "Graphic Designer",
+        "description": "As a designer, I was skeptical at first, but Nano Banana Pro has become an essential tool in my creative process. It's perfect for rapid prototyping and concept exploration.",
         "image": {
           "src": "/imgs/users/2.png"
         }
       },
       {
-        "title": "Marcus Thompson",
-        "label": "Solo Developer",
-        "description": "As a solo developer, ShipAny gave me everything I needed - auth, payments, AI integration, and beautiful UI. Launched my SaaS in a weekend!",
+        "title": "Emma Rodriguez",
+        "label": "Content Creator",
+        "description": "I create content for multiple platforms daily, and Nano Banana Pro helps me generate unique, eye-catching images that my audience loves. It's a game-changer!",
         "image": {
           "src": "/imgs/users/3.png"
         }
       },
       {
-        "title": "Sofia Garcia",
-        "label": "CEO of Melodisco",
-        "description": "The templates are production-ready and highly customizable. We built our AI music platform in hours instead of months. Incredible time-to-market!",
+        "title": "Michael Park",
+        "label": "E-commerce Owner",
+        "description": "We use Nano Banana Pro to create product mockups and marketing materials. The commercial license and high resolution output are perfect for our needs.",
         "image": {
           "src": "/imgs/users/4.png"
         }
       },
       {
-        "title": "James Wilson",
-        "label": "Tech Lead at GPTs.works",
-        "description": "ShipAny's infrastructure is rock-solid. We scaled from 0 to 10k users without touching the backend. Best investment for our AI startup.",
+        "title": "Lisa Thompson",
+        "label": "Art Director",
+        "description": "The level of control and quality you get with Nano Banana Pro is unmatched. It's become an indispensable part of our creative toolkit.",
         "image": {
           "src": "/imgs/users/5.png"
         }
       },
       {
-        "title": "Anna Zhang",
-        "label": "Startup Founder",
-        "description": "From idea to launch in 3 days! ShipAny's templates and deployment tools made it possible to test our AI business concept incredibly fast.",
+        "title": "David Kim",
+        "label": "Indie Game Developer",
+        "description": "Nano Banana Pro helps me create concept art and assets for my games. The speed and quality allow me to iterate quickly and bring my vision to life.",
         "image": {
           "src": "/imgs/users/6.png"
         }
@@ -549,37 +550,49 @@
     "name": "faq",
     "label": "FAQ",
     "title": "Frequently Asked Questions",
-    "description": "Have another question? Contact us on Discord or by email.",
+    "description": "Have another question? Contact our support team.",
     "items": [
       {
-        "title": "What is AI Coloring Page Generator?",
-        "description": "Our tool transforms photos and text prompts into printable coloring pages using AI."
+        "title": "What is Nano Banana Pro?",
+        "description": "Nano Banana Pro is an advanced AI image generation platform that creates high-quality, photorealistic images from text descriptions using state-of-the-art AI models."
       },
       {
-        "title": "What file formats can I upload?",
-        "description": "Upload JPEG or PNG images up to 5MB to create coloring pages."
+        "title": "How does the AI image generation work?",
+        "description": "Simply describe what you want to see in text, and our AI models will generate images based on your description. You can refine and edit the results until they match your vision."
       },
       {
-        "title": "Is it free to use?",
-        "description": "Basic features are free. Premium plans unlock higher resolution and batch processing."
+        "title": "Can I use the images commercially?",
+        "description": "Yes! Pro and Enterprise plans include commercial use licenses, allowing you to use generated images in your business, marketing materials, and products."
+      },
+      {
+        "title": "What image resolutions are available?",
+        "description": "Free users get 1024x1024, Pro users get up to 2048x2048, and Enterprise users can generate images up to 4096x4096 resolution."
+      },
+      {
+        "title": "How many images can I generate?",
+        "description": "Free plan includes 50 generations per month, Pro plan includes 500, and Enterprise offers unlimited generations."
+      },
+      {
+        "title": "Can I edit images after generation?",
+        "description": "Yes! Our platform includes advanced editing tools to modify, refine, and perfect your generated images."
       }
     ]
   },
   "cta": {
     "name": "cta",
-    "title": "Start Generating Coloring Pages",
-    "description": "Create your first coloring page with AI now.",
+    "title": "Start Creating with AI Today",
+    "description": "Transform your ideas into stunning images in seconds.",
     "buttons": [
       {
-        "title": "Create Page",
+        "title": "Start Free Trial",
         "url": "/#feature",
-        "target": "_blank",
-        "icon": "GoArrowUpRight"
+        "target": "_self",
+        "icon": "RiFlashlightFill"
       },
       {
-        "title": "View Examples",
+        "title": "View Gallery",
         "url": "/#showcase",
-        "target": "_blank",
+        "target": "_self",
         "variant": "outline"
       }
     ]
@@ -587,15 +600,15 @@
   "footer": {
     "name": "footer",
     "brand": {
-      "title": "Mimi Panda",
-      "description": "Create unique coloring pages from your photos and text with AI.",
+      "title": "Nano Banana Pro",
+      "description": "Advanced AI image generation platform. Transform your ideas into stunning visuals.",
       "logo": {
         "src": "/imgs/logo.png",
-        "alt": "Mimi Panda"
+        "alt": "Nano Banana Pro"
       },
-      "url": "https://mimi-panda.com/"
+      "url": "https://nano-banana-pro.com/"
     },
-    "copyright": "© 2025 • Mimi Panda All rights reserved.",
+    "copyright": "© 2025 • Nano Banana Pro. All rights reserved.",
     "nav": {
       "items": [
         {
@@ -622,39 +635,44 @@
           "title": "Resources",
           "children": [
             {
-              "title": "Documents",
-              "url": "https://docs.shipany.ai",
-              "target": "_blank"
+              "title": "Documentation",
+              "url": "/docs",
+              "target": "_self"
             },
             {
-              "title": "Components",
-              "url": "https://shipany.ai/components",
-              "target": "_blank"
+              "title": "API Reference",
+              "url": "/api-docs",
+              "target": "_self"
             },
             {
-              "title": "Templates",
-              "url": "https://shipany.ai/templates",
-              "target": "_blank"
+              "title": "Tutorials",
+              "url": "/tutorials",
+              "target": "_self"
+            },
+            {
+              "title": "Blog",
+              "url": "/posts",
+              "target": "_self"
             }
           ]
         },
         {
-          "title": "Friends",
+          "title": "Company",
           "children": [
             {
-              "title": "ThinkAny",
-              "url": "https://thinkany.ai",
-              "target": "_blank"
+              "title": "About Us",
+              "url": "/about",
+              "target": "_self"
             },
             {
-              "title": "HeyBeauty",
-              "url": "https://heybeauty.ai",
-              "target": "_blank"
+              "title": "Contact",
+              "url": "/contact",
+              "target": "_self"
             },
             {
-              "title": "Pagen",
-              "url": "https://pagen.so",
-              "target": "_blank"
+              "title": "Careers",
+              "url": "/careers",
+              "target": "_self"
             }
           ]
         }
@@ -665,25 +683,25 @@
         {
           "title": "X",
           "icon": "RiTwitterXFill",
-          "url": "https://x.com/shipanyai",
+          "url": "https://x.com/nanobananapro",
           "target": "_blank"
         },
         {
-          "title": "Github",
-          "icon": "RiGithubFill",
-          "url": "https://github.com/shipanyai",
+          "title": "Instagram",
+          "icon": "RiInstagramFill",
+          "url": "https://instagram.com/nanobananapro",
           "target": "_blank"
         },
         {
           "title": "Discord",
           "icon": "RiDiscordFill",
-          "url": "https://discord.gg/HQNnrzjZQS",
+          "url": "https://discord.gg/nanobananapro",
           "target": "_blank"
         },
         {
           "title": "Email",
           "icon": "RiMailLine",
-          "url": "mailto:support@shipany.ai",
+          "url": "mailto:support@nano-banana-pro.com",
           "target": "_self"
         }
       ]
